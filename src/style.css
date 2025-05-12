@@ -1,1 +1,18 @@
 @import "tailwindcss";
+.accent-green-600::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #16a34a; /* Tailwind green-600 */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .accent-green-600::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #16a34a;
+    border-radius: 50%;
+    cursor: pointer;
+  }
