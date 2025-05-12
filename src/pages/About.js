@@ -1,6 +1,6 @@
 import '../style.css';
-import { createHeader } from '../components/Header';
-import { createFooter } from '../components/Footer';
+import { createHeader } from '../components/header';
+import { createFooter } from '../components/footer';
 
 document.body.prepend(createHeader());
 document.querySelector('#about').innerHTML = `
