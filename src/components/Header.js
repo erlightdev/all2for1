@@ -7,7 +7,7 @@ export const createHeader = () => {
       <div class="container mx-auto px-4 py-3 flex items-center justify-between">
         <div class="flex items-center">
           <div class="text-2xl font-bold text-green-600 mr-2">
-            <span class="text-black">All2</span>For1
+            <span class="text-black">Bogo</span>Blast
             <span class="text-black">.com</span>
           </div>
         </div>
