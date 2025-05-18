@@ -2,13 +2,13 @@
 import '../style.css'; // Ensure Tailwind CSS is imported and configured
 
 // For a full-page sign-in like this, a site header/footer is usually omitted.
-// import { createHeader } from '../components/header';
+import { createHeader } from '../components/header';
 // import { createFooter } from '../components/footer';
 
 const signInPageContainer = document.querySelector('#signin-page-modern'); // You'll need <div id="signin-page-modern"></div> in your HTML
 
 if (signInPageContainer) {
-    signInPageContainer.innerHTML = `
+  signInPageContainer.innerHTML = `
     <div class="min-h-screen flex flex-col md:flex-row bg-gray-50">
       <!-- Left Column: Form -->
       <div class="w-full md:w-1/2 lg:w-[45%] xl:w-2/5 bg-white flex flex-col justify-center p-8 sm:p-12 lg:p-16 xl:p-24">
@@ -138,19 +138,23 @@ if (signInPageContainer) {
     </div>
     `;
 
-    // Basic form submission handler (for demonstration)
-    const signInForm = document.getElementById('signInFormModern');
-    if (signInForm) {
-        signInForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const email = document.getElementById('emailModern').value;
-            const password = document.getElementById('passwordModern').value;
-            console.log('Sign in attempt with:', { email, password });
-            alert('Sign-in form submitted! Check console for data. (This is a demo)');
-            // Add actual sign-in logic here (e.g., API call)
-        });
-    }
+  // Basic form submission handler (for demonstration)
+  const signInForm = document.getElementById('signInFormModern');
+  if (signInForm) {
+    signInForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('emailModern').value;
+      const password = document.getElementById('passwordModern').value;
+      console.log('Sign in attempt with:', { email, password });
+      alert('Sign-in form submitted! Check console for data. (This is a demo)');
+      // Add actual sign-in logic here (e.g., API call)
+    });
+  }
 
 } else {
-    console.error("Sign-in page container (#signin-page-modern) not found in HTML.");
+  console.error("Sign-in page container (#signin-page-modern) not found in HTML.");
 }
+
+// Render the header, main content, and footer
+document.body.prepend(createHeader());
+// document.body.appendChild(createFooter());
